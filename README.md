@@ -1,2 +1,1 @@
-# skem-ui
-webui
+# Skemify UI
