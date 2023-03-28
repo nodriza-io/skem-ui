@@ -14,7 +14,7 @@ export default {
         ? document.body.classList.add('dark-theme')
         : document.body.classList.remove('dark-theme')
     })
-
+    store.state.theme = 'dark'
     store.state.theme === 'dark'
       ? document.body.classList.add('dark-theme')
       : document.body.classList.remove('dark-theme')
