@@ -13,7 +13,7 @@
   </div>
   <AppAside />
 </template>
-<script lang="ts">
+<script>
 import { CContainer } from '@coreui/vue-pro'
 import AppAside from '@/components/AppAside.vue'
 import AppFooter from '@/components/AppFooter.vue'

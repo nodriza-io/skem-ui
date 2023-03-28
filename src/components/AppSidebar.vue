@@ -1,7 +1,6 @@
 <template>
   <CSidebar
     position="fixed"
-    selfHiding="md"
     :unfoldable="sidebarUnfoldable"
     :visible="sidebarVisible"
     @visible-change="
@@ -14,12 +13,12 @@
   >
     <CSidebarBrand>
       <CIcon
-        customClassName="sidebar-brand-full"
+        custom-class-name="sidebar-brand-full"
         :icon="logoNegative"
         :height="35"
       />
       <CIcon
-        customClassName="sidebar-brand-narrow"
+        custom-class-name="sidebar-brand-narrow"
         :icon="sygnet"
         :height="35"
       />
@@ -32,7 +31,7 @@
   </CSidebar>
 </template>
 
-<script lang="ts">
+<script>
 import { computed } from 'vue'
 import { useStore } from 'vuex'
 import { AppSidebarNav } from './AppSidebarNav'
@@ -43,7 +42,6 @@ export default {
   components: {
     AppSidebarNav,
   },
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   setup() {
     const store = useStore()
     return {

@@ -4,7 +4,10 @@
       <CAvatar :src="avatar" size="md" />
     </CDropdownToggle>
     <CDropdownMenu class="pt-0">
-      <CDropdownHeader component="h6" class="bg-light fw-semibold py-2">
+      <CDropdownHeader
+        component="h6"
+        class="dropdown-header bg-light dark:bg-white dark:bg-opacity-10 py-2"
+      >
         Account
       </CDropdownHeader>
       <CDropdownItem>
@@ -29,7 +32,10 @@
           itemsCount
         }}</CBadge>
       </CDropdownItem>
-      <CDropdownHeader component="h6" class="bg-light fw-semibold py-2">
+      <CDropdownHeader
+        component="h6"
+        class="dropdown-header bg-light dark:bg-white dark:bg-opacity-10 py-2"
+      >
         Settings
       </CDropdownHeader>
       <CDropdownItem> <CIcon icon="cil-user" /> Profile </CDropdownItem>
@@ -53,11 +59,10 @@
   </CDropdown>
 </template>
 
-<script lang="ts">
-import avatar from './../assets/images/avatars/8.jpg'
+<script>
+import avatar from '@/assets/images/avatars/8.jpg'
 export default {
   name: 'AppHeaderDropdownAccnt',
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   setup() {
     return {
       avatar: avatar,

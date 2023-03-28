@@ -1,13 +1,11 @@
 <template>
   <router-view />
 </template>
-
-<script lang="ts">
+<script>
 import { watch } from 'vue'
 import { useStore } from 'vuex'
 
 export default {
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   setup() {
     const store = useStore()
 

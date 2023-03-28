@@ -21,11 +21,11 @@
       <CHeaderNav class="ms-auto me-4">
         <CButtonGroup aria-label="Theme switch">
           <CFormCheck
+            id="btn-light-theme"
             type="radio"
             :button="{ color: 'primary' }"
             name="theme-switch"
-            id="btn-light-theme"
-            autoComplete="off"
+            autocomplete="off"
             :checked="$store.state.theme === 'default'"
             @change="
               (event) =>
@@ -38,11 +38,11 @@
             <template #label><CIcon icon="cil-sun" /></template>
           </CFormCheck>
           <CFormCheck
+            id="btn-dark-theme"
             type="radio"
             :button="{ color: 'primary' }"
             name="theme-switch"
-            id="btn-dark-theme"
-            autoComplete="off"
+            autocomplete="off"
             :checked="$store.state.theme === 'dark'"
             @change="
               (event) =>
@@ -55,6 +55,11 @@
             <template #label><CIcon icon="cil-moon" /></template>
           </CFormCheck>
         </CButtonGroup>
+      </CHeaderNav>
+      <CHeaderNav class="me-4">
+        <AppHeaderDropdownNotif />
+        <AppHeaderDropdownTasks />
+        <AppHeaderDropdownMssgs />
       </CHeaderNav>
       <CHeaderNav class="ms-3 me-4">
         <AppHeaderDropdownAccnt />
@@ -74,9 +79,12 @@
   </CHeader>
 </template>
 
-<script lang="ts">
-import AppBreadcrumb from './AppBreadcrumb.vue'
-import AppHeaderDropdownAccnt from './AppHeaderDropdownAccnt.vue'
+<script>
+import AppBreadcrumb from './AppBreadcrumb'
+import AppHeaderDropdownAccnt from './AppHeaderDropdownAccnt'
+import AppHeaderDropdownMssgs from './AppHeaderDropdownMssgs'
+import AppHeaderDropdownNotif from './AppHeaderDropdownNotif'
+import AppHeaderDropdownTasks from './AppHeaderDropdownTasks'
 import { logo } from '@/assets/brand/logo'
 
 export default {
@@ -84,8 +92,10 @@ export default {
   components: {
     AppBreadcrumb,
     AppHeaderDropdownAccnt,
+    AppHeaderDropdownMssgs,
+    AppHeaderDropdownNotif,
+    AppHeaderDropdownTasks,
   },
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   setup() {
     return {
       logo,
